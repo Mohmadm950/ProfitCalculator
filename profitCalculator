@@ -1,0 +1,61 @@
+// Code to get the Profit from items u sell
+
+import java.util.Scanner;
+
+void main() {
+
+    Scanner scanner = new  Scanner(System.in);
+
+    //Products
+    String Miele;
+    String Siemens;
+    String Braun;
+    String KitchenAid;
+
+    // Start price from the Product (Investment)
+    double StartPriceM = 49.99;
+    double StartPriceS = 69.99;
+    double StartPriceB = 129.99;
+    double StartPriceKA = 99.99;
+
+    // The price for how much u sell it
+    double priceMielie = 69.99;
+    double priceSiemens = 89.99;
+    double priceBraun = 149.99;
+    double priceKitchenAid = 119.99;
+
+    // how many pieces per product
+    int stkMielie;
+    int stkSiemens;
+    int stkBraun;
+    int stkKitchenAid;
+
+    // Input to get pieces per product
+    System.out.print("Wie viele Mieles verkauft: ");
+    stkMielie = scanner.nextInt();
+    System.out.print("Wie viele Siemens verkauft: ");
+    stkSiemens = scanner.nextInt();
+    System.out.print("Wie viele Braun verkauft: ");
+    stkBraun = scanner.nextInt();
+    System.out.print("Wie viele Kitchen Aid verkauft: ");
+    stkKitchenAid = scanner.nextInt();
+
+    // Calculatpr to get the profit
+    double checkoutM = stkMielie * priceMielie - stkMielie * StartPriceM;
+    System.out.printf("Sie haben %d Mielies verkauft und damit %.2f€ Profit gemacht.\n", stkMielie, checkoutM);
+
+    double checkoutS = stkSiemens * priceSiemens - stkSiemens * StartPriceS;
+    System.out.printf("Sie haben %d Siemens verkauft und damit %.2f€ Profit gemacht.\n", stkSiemens, checkoutS);
+
+    double checkoutB = stkBraun * priceBraun - stkBraun * StartPriceB;
+    System.out.printf("Sie haben %d Braun verkauft und damit %.2f€ Profit gemacht.\n", stkBraun, checkoutB);
+
+    double checkoutKA = stkKitchenAid * priceKitchenAid - stkKitchenAid * StartPriceKA;
+    System.out.printf("Sie haben %d Kitchenaid verkauft und damit %.2f€ Profit gemacht.\n", stkKitchenAid, checkoutKA);
+
+    double checkoutAll =  checkoutM + checkoutS + checkoutB + checkoutKA;
+    System.out.println("Sie haben insgesammten profit von €" + checkoutAll + "gemacht.");
+
+    scanner.close();
+
+}
